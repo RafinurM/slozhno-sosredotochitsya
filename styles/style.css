@@ -1,5 +1,188 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: grid;
+  background-color: #000028;
+  background-image: url('../images/cover-image-dark.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  inline-size: 375px;
 }
+
+/* Переиспользуемые паттерны */
+
+/* задний фон у заголовков и в шапке у параграфа */
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+
+
+/* Шапка */
+
+.header {
+  position: relative;
+  display: grid;
+  justify-items: end;
+  /* align-items: center; */
+  padding: 10px;
+  
+}
+
+.header::before {
+  content: '';
+  align-self: start;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header::after {
+  content: '';
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  inline-size: 25px;
+  block-size: 25px;
+  justify-self: start;
+}
+
+.decorate__element {
+  position: absolute;
+  color: var(--accent-color);
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  inset-block-start: 10px;
+  inset-inline-start: 306px;
+  
+}
+
+.decorate__element::before {
+  content: 'rec';
+}
+
+.decorate__element::after {
+  content: '';
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-inline-start: 10px;
+}
+.header__theme-menu {
+  /* margin: 55px 0; */
+  
+}
+
+.header__theme-menu-list {
+  display: grid;
+
+  row-gap: 10px;
+}
+
+.header__theme-menu-item {
+  list-style-type: none;
+ 
+  
+}
+
+
+/* кнопки */
+
+.header__theme-menu-button {
+  border: none;
+  color: var(--accent-color);
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  padding: 1.5px 13px;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.title {
+  inline-size: 355px;
+}
+.title__header {
+  color: #DB00FF;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title__description {
+  color: #000028;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 55px 0;
+}
+
+/* Основной контент */
+
+.main {
+  margin: 0 auto;
+  color: var(--regular-color);
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
+  inline-size: 355px;
+}
+
+.section__header {
+  margin-block-end: 20px;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: inherit;
+}
+
+.section__content-wrapper {
+
+}
+
+.section__content-title {
+  margin-block-end: 10px;
+  color: #000028;
+  font-weight: bold;
+}
+
+.section__content {
+  margin-block-end: 10px;
+  font-weight: normal;
+}
+
+.section__content-link {
+  border-block-end: 1px solid var(--regular-color);
+  color: inherit;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.section__content-item {
+}
+
+.footer {
+
+}
+
+.section__content-image {
+  width: 100%;
+}
+
