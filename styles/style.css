@@ -3,6 +3,7 @@
 
 
 .page {
+  padding: 0 10px;
   /* display: grid; */
   background-color: #000028;
   background-image: url('../images/cover-image-dark.png');
@@ -11,15 +12,14 @@
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 375px;
-  padding: 0 10px;
 }
 
 /* Переиспользуемые паттерны */
 
 /* задний фон у заголовков и в шапке у параграфа */
 .title-decor {
-  background-color: var(--accent-color);
   align-self: start;
+  background-color: var(--accent-color);
 }
 
 
@@ -29,9 +29,9 @@
 .header {
   position: relative;
   display: grid;
+  justify-items: end;
   /* justify-content: space-between; */
   align-content: space-between;
-  justify-items: end;
   /* padding: 10px; */
   min-block-size: 668px;
 }
@@ -118,8 +118,8 @@
 }
 
 .header__theme-menu-button:hover {
-  cursor: pointer;
   border: 1px solid var(--accent-color-with-opacity);
+  cursor: pointer;
 }
 
 
@@ -134,7 +134,7 @@
 .header__theme-menu-button:focus-visible {
   /* outline: 1px solid var(--decorate-color); */
   text-decoration: underline;
-  text-decoration-color: var(--decorate-color)
+  text-decoration-color: var(--decorate-color);
 
 }
 
@@ -143,8 +143,8 @@
 
 } */
 .title__header {
-  align-self: center;
   justify-self: start;
+  align-self: center;
   margin-block-start: 30px;
   color: var(--main-color);
   font-family: 'IBM Plex mono', sans-serif;
@@ -232,13 +232,50 @@
 .section.image__section {
   row-gap: 10px;
 }
+
 .section__content-list {
   display: grid;
+  grid-template-rows: 142px 355px 237px 355px 237px;
+  grid-template-areas: 
+  "mountains-sunset"
+  "icecream"
+  "audio-cassette"
+  "books"
+  "street";
   row-gap: 10px;
 }
+
 .section__content-item {
   font-family: inherit;
   line-height: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.image__mountains-sunset {
+  grid-area: mountains-sunset;
+  background-image: url(../images/sunset.png);
+}
+
+.image__icecream {
+  grid-area: icecream;
+  background-image: url(../images/ice-cream.png);
+}
+
+.image__audio-cassette {
+  grid-area: audio-cassette;
+  background-image: url(../images/tape.png);
+}
+
+.image__books {
+  grid-area: books;
+  background-image: url(../images/books.png);
+}
+
+.image__street {
+  grid-area: street;
+  background-image: url(../images/street.png);
 }
 
 .footer {
@@ -247,7 +284,4 @@
   font-family: inherit;
 }
 
-.section__content-image {
-  width: 100%;
-}
 

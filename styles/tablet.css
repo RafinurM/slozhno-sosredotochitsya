@@ -44,26 +44,18 @@
   }
 
   .section__content-list {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    /* grid-auto-flow: dense; */
-    max-block-size: 780px;
+    padding-block-start: 10px;
+    grid-template-rows: 192px 230px 318px;
+    grid-template-columns: 229px 230px 229px;
+    grid-template-areas: 
+      "mountains-sunset mountains-sunset icecream"
+      "audio-cassette books icecream"
+      "audio-cassette street street";
+    gap: 20px;
+    /* block-size: 780px; */
   }
 
-  .section__content-list .section__content-item:first-child .section__content-image,
-  .section__content-list .section__content-item:last-child .section__content-image {
-    max-inline-size: 479px;
-  }
+  .section__content-item {
 
-  .section__content-list .section__content-item .section__content-image {
-    max-inline-size: 229px;
-  }
-
-  .section__content-list .section__content-item:nth-child(2) .section__content-image {
-    min-block-size: 441px;
-  }
-
-  .section__content-list .section__content-item:nth-child(3) .section__content-image {
-    min-block-size: 100%;
   }
 }
