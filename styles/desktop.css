@@ -1,0 +1,65 @@
+/* desktop version */
+
+@media (min-width: 1024px) {
+  .header {
+    min-block-size: 768px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    gap: 10px;
+    block-size: 230px;
+  }
+
+  .title__header {
+    font-size: 157px;
+  }
+
+  .title__description {
+    max-inline-size: 491px;
+  }
+  
+  /* Вторая секция в три колонки */
+
+  .section:nth-child(2) {
+    grid-template-columns: repeat(3, 315px);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .section__header {
+    inline-size: 315px;
+  }
+
+  .section__content-wrapper {
+    align-content: start;
+    min-inline-size: 0;
+  }
+
+ 
+
+  .section:nth-child(2) .section__header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    column-gap: 20px;
+    min-inline-size: 314px;
+  }
+
+  /* Изображения */
+
+  .section__content-list {
+    grid-template-rows: minmax(192px, 260px) minmax(230px, 315px) minmax(318px, 428px);
+  }
+
+  .footer {
+    min-block-size: 768px;
+  }
+
+  .footer__header {
+    font-size: 157px;
+  }
+}

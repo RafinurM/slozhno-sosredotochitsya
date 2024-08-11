@@ -1,6 +1,7 @@
 /* tablet version */
 
 @media (min-width: 768px) {
+  
   .page {
     padding: 20px;
   }
@@ -8,26 +9,34 @@
   .header {
     padding-block-end: 40px;
     min-block-size: 1024px;
-    /* width: 100%; */
+  }
 
+  .decorate__element {
+    inset-inline-end: 30px;
   }
 
   .title__header {
-    margin-block-start: 0;
+  
   }
 
   .title__description {
     margin-block-start: 0;
-    /* margin-block-end: 20px; */
+    max-inline-size: 364px;
   }
 
   .main {
     row-gap: 80px;
     margin: 40px 0;
+    margin-block-end: 60px;
   }
 
   .section {
     column-gap: 20px;
+  }
+
+  .section__header {
+    min-inline-size: 236px;
+    grid-row: 1/3;
   }
 
   .section:nth-child(odd) .section__content-wrapper {
@@ -46,16 +55,16 @@
   .section__content-list {
     padding-block-start: 10px;
     grid-template-rows: 192px 230px 318px;
-    grid-template-columns: 229px 230px 229px;
+    grid-template-columns: minmax(229px, 315px) minmax(230px, 315px) minmax(229px, 315px);
     grid-template-areas: 
       "mountains-sunset mountains-sunset icecream"
       "audio-cassette books icecream"
       "audio-cassette street street";
     gap: 20px;
-    /* block-size: 780px; */
   }
 
-  .section__content-item {
-
+  .footer {
+    min-block-size: 1024px;
+    padding: 20px 0;
   }
 }
