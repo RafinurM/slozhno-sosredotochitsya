@@ -2,12 +2,9 @@
 
 @media (min-width: 768px) {
   
-  .page {
-    padding: 20px;
-  }
-
   .header {
-    padding-block-end: 40px;
+    padding: 20px;
+    /* padding-block-end: 40px; */
     min-block-size: 1024px;
   }
 
@@ -15,19 +12,14 @@
     inset-inline-end: 30px;
   }
 
-  .title__header {
-  
-  }
-
   .title__description {
-    margin-block-start: 0;
     max-inline-size: 364px;
   }
 
   .main {
+    padding: 20px;
     row-gap: 80px;
     margin: 40px 0;
-    margin-block-end: 60px;
   }
 
   .section {
@@ -45,7 +37,6 @@
 
   .section:nth-child(even) .section__header { 
     max-inline-size: 200px;
-
   }
 
   .section__content-wrapper {
@@ -65,6 +56,6 @@
 
   .footer {
     min-block-size: 1024px;
-    padding: 20px 0;
+    padding: 20px;
   }
 }

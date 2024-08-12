@@ -23,6 +23,10 @@
   .title__description {
     max-inline-size: 491px;
   }
+
+  .main {
+    justify-items: center;
+  }
   
   /* Вторая секция в три колонки */
 
