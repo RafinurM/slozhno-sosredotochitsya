@@ -3,12 +3,25 @@
 
 
 .page {
-  background-color: #000028;
+  position: relative;
+  z-index: -2;
+  background-color: var(--bg-theme);  /* если картинка не загрузится */
+  min-inline-size: 375px;
+}
+
+/* фон с прозрачностью  */
+
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.5;  /* 50% прозрачности */
+  background-image: var(--bg-theme-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  min-inline-size: 375px;
 }
 
 /* Переиспользуемые паттерны */
@@ -70,16 +83,15 @@
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--rec-element);
   background-color: var(--rec-element);
-
 }
 
 /* Шапка */
 
 .header {
   display: grid;
-  padding: 10px;
   grid-template-rows: 1fr min-content 1fr;
   justify-items: end;
+  padding: 10px;
   block-size: 100vh;
   min-block-size: 668px;
 }
@@ -100,7 +112,6 @@
 .header__theme-menu-item {
   list-style-type: none;
 }
-
 
 /* кнопки */
 
@@ -151,7 +162,7 @@
   grid-row: 3/4;
   grid-column-start: 1;
   align-self: center;
-  color: #000028;
+  color: var(--title-description-theme);
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -163,8 +174,8 @@
 .main {
   display: grid;
   row-gap: 50px;
-  padding: 10px;
   margin: 30px 0;
+  padding: 10px;
   color: var(--regular-color);
   font-family: 'IBM Plex mono', sans-serif;
   font-size: 18px;
@@ -189,13 +200,13 @@
 }
 
 .section__content-title {
-  color: #000028;
+  color: var(--title-description-theme);
   font-weight: bold;
   font-size: 18px;
 }
 
 .section__content-subtitle {
-  color: #000028;
+  color: var(--title-description-theme);
   font-weight: normal;
 }
 
@@ -219,7 +230,6 @@
 
 .section__content-link:focus-visible {
   outline: 1px solid var(--regular-color);
-
 }
 
 .section.image__section {

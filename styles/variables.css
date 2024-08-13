@@ -10,4 +10,5 @@
   --decorate-color: #FF0070; /*для декоративных элементов и заголовков h2*/
   --rec-element: #FF0070;
   --accent-color-with-opacity: rgba(255, 0, 112, 0.4);
+  --title-description-theme: #000028;
 }

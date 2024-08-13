@@ -27,7 +27,7 @@
   .main {
     justify-items: center;
   }
-  
+
   /* Вторая секция в три колонки */
 
   .section:nth-child(2) {
@@ -44,8 +44,6 @@
     min-inline-size: 0;
   }
 
- 
-
   .section:nth-child(2) .section__header {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -56,9 +54,14 @@
   /* Изображения */
 
   .section__content-list {
-    grid-template-rows: minmax(192px, 260px) minmax(230px, 315px) minmax(318px, 428px);
+    grid-template-rows: minmax(192px, 260px) minmax(230px, 315px) minmax(
+        318px,
+        428px
+      );
   }
 
+  /* footer */
+  
   .footer {
     min-block-size: 768px;
   }

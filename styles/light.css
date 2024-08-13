@@ -15,7 +15,9 @@
   --decorate-color: #353430;
   --rec-element: transparent;
   --accent-color-with-opacity: rgba(53, 52, 48, 0.4);
-  background-image: url(../images/cover-image-light.png);
+  --bg-theme: #FFF1F7;
+  --title-description-theme: #353430;
+  --bg-theme-image: url("../images/cover-image-light.png");
 }
 
 @media (prefers-color-scheme: light) {
@@ -26,5 +28,8 @@
     --decorate-color: #353430;
     --rec-element: transparent;
     --accent-color-with-opacity: rgba(53, 52, 48, 0.4);
+    --bg-theme: #FFF1F7;
+    --title-description-theme: #353430;
+    --bg-theme-image: url("../images/cover-image-light.png");
   }
 }
