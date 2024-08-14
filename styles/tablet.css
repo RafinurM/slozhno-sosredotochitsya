@@ -7,8 +7,16 @@
     padding-inline-start: 0;
   }
 
+  .decorated-zone::after {
+    margin-inline-start: 20px; /* отступ для уголка слева*/
+  }
+
   .decorate__element {
     inset-inline-end: 30px;
+  }
+
+  .title__header {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .title__description {
@@ -59,5 +67,15 @@
   .footer {
     padding: 20px;
     min-block-size: 1024px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .footer__header {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .footer.decorated-zone::after {
+    margin-inline-start: 0;
   }
 }
