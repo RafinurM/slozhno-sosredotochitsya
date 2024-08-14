@@ -11,4 +11,5 @@
   --rec-element: #FF0070;
   --accent-color-with-opacity: rgba(255, 0, 112, 0.4);
   --title-description-theme: #000028;
+  --general-font: 'IBM Plex mono', sans-serif;
 }

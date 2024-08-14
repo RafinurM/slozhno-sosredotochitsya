@@ -7,6 +7,7 @@
   z-index: -2;
   background-color: var(--bg-theme);  /* если картинка не загрузится */
   min-inline-size: 375px;
+  margin: 0 auto; /* выравниваем по центру */
 }
 
 /* фон с прозрачностью  */
@@ -63,7 +64,7 @@
 .decorate__element {
   position: absolute;
   color: var(--rec-element);
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: var(--general-font);
   font-size: 18px;
   line-height: 25px;
   text-transform: uppercase;
@@ -111,20 +112,25 @@
 
 .header__theme-menu-item {
   list-style-type: none;
+  align-self: start;
 }
 
 /* кнопки */
 
 .header__theme-menu-button {
   border: none;
-  padding: 1.5px 13px;
+  padding: 1.5px 13px 4px;
   color: var(--decorate-color);
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: var(--general-font);
   font-weight: normal;
+  line-height: 18px;
   font-size: 18px;
-  text-align: center;
   text-transform: lowercase;
   background-color: transparent;
+}
+
+.header__theme-menu-item:has(.header__theme-menu-button:focus-visible) {
+  border-block-end: 1px solid var(--decorate-color);
 }
 
 .header__theme-menu-button:hover {
@@ -134,16 +140,16 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--decorate-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:focus {
   outline: none;
 }
 
-.header__theme-menu-button:focus-visible {
-  text-decoration: underline;
-  text-decoration-color: var(--decorate-color);
-}
+/* .header__theme-menu-button:focus-visible {
+
+} */
 
 .title__header {
   grid-row: 2/3;
@@ -151,9 +157,10 @@
   justify-self: start;
   align-self: start;
   color: var(--main-color);
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: var(--general-font);
   font-weight: bold;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  /* font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); */
   line-height: 95.7px;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
@@ -163,7 +170,7 @@
   grid-column-start: 1;
   align-self: center;
   color: var(--title-description-theme);
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: var(--general-font);
   font-weight: bold;
   font-size: 18px;
   line-height: 23.4px;
@@ -177,7 +184,7 @@
   margin: 30px 0;
   padding: 10px;
   color: var(--regular-color);
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: var(--general-font);
   font-size: 18px;
   line-height: 23.4px;
 }
@@ -239,7 +246,7 @@
 .section__content-list {
   display: grid;
   grid-template-rows: 142px 355px 237px 355px 237px;
-  grid-template-areas: 
+  grid-template-areas:
   "mountains-sunset"
   "icecream"
   "audio-cassette"
@@ -251,34 +258,32 @@
 .section__content-item {
   font-family: inherit;
   line-height: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+}
+
+.section__content-item > img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
 .image__mountains-sunset {
   grid-area: mountains-sunset;
-  background-image: url(../images/sunset.png);
 }
 
 .image__icecream {
   grid-area: icecream;
-  background-image: url(../images/ice-cream.png);
 }
 
 .image__audio-cassette {
   grid-area: audio-cassette;
-  background-image: url(../images/tape.png);
 }
 
 .image__books {
   grid-area: books;
-  background-image: url(../images/books.png);
 }
 
 .image__street {
   grid-area: street;
-  background-image: url(../images/street.png);
 }
 
 .footer {
@@ -294,7 +299,7 @@
   justify-items: center;
   align-content: center;
   color: var(--main-color);
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: var(--general-font);
   font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;

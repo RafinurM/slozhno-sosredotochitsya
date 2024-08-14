@@ -4,6 +4,7 @@
   .header {
     padding: 20px;
     min-block-size: 1024px;
+    padding-inline-start: 0;
   }
 
   .decorate__element {

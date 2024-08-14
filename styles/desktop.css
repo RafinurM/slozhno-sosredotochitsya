@@ -3,11 +3,13 @@
 @media (min-width: 1024px) {
   .header {
     min-block-size: 768px;
+    padding-left: 0;
   }
 
   .header__theme-menu {
     justify-self: center;
     align-self: start;
+    margin-inline-start: 20px;
   }
 
   .header__theme-menu-list {
@@ -22,6 +24,7 @@
 
   .title__description {
     max-inline-size: 491px;
+    margin-block-start: 15px;
   }
 
   .main {
@@ -61,7 +64,7 @@
   }
 
   /* footer */
-  
+
   .footer {
     min-block-size: 768px;
   }
